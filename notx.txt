@@ -1,0 +1,49 @@
+要安装的东西
+
+npm init -y
+bower init
+bower install angular angular-route angular-moment bootstrap --save
+npm install express socket.io cookie-parser express-session mongoose --save
+
+
+1、创建项目
+    先去创建文件夹 并且进入   mkdir  nodejsChat
+                           cd  nodejsChat
+
+2、初始化 bower 配置文件
+ 手工创建    .bowerrc 用来指定安装目录
+             {
+               "directory":"./public/lib"
+             }
+
+
+
+3、  bower.json 用来指定项目的前端依赖库的  此文件经过下面的命令出现的
+           bower init
+
+           "dependencies": {
+               "cookie-parser": "^1.4.3",
+               "express": "^4.14.0",
+               "express-session": "^1.14.1",
+               "mongoose": "^4.6.3",
+               "socket.io": "^1.5.0"
+             }
+
+ 4、   然后在安装
+    bower install angular angular-route angular-moment bootstrap --save
+    npm install express socket.io cookie-parser express-session mongoose --save
+
+
+5、在.gitignore中增加以下忽略
+
+            node_modules
+            lib
+            .idea
+
+
+
+前端是放到app文件夹里面
+后端是server
+
+然后在app中创建index.html
+再往server中写代码  然后再一一对应弄完
