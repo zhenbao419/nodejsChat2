@@ -48,7 +48,7 @@ npm install express socket.io cookie-parser express-session mongoose --save
 然后在app中创建index.html
 再往server中写代码  然后再一一对应弄完
 
-
+要是想git的话 是在   VCS--》Import into Version Control --> share Project to gitHub  这样就可以推到你的gitHub中了
 想从本项目中提交到你的github中的话就要第一次就可能需要输入几个命令 但是第二次就不需要了
     git add -A
     git commit -m"描述的东西"
@@ -56,3 +56,8 @@ npm install express socket.io cookie-parser express-session mongoose --save
     然后输入你的git账户名和账户密码
     然后就完成了
     git remove -v
+
+
+
+ 若是你已经上传一次后  你更改了里面的项目 你想要再次push的话并且不想重新建立的话就可以从
+  VCS--》Commit Change --》 commit and push 这样就可以了
