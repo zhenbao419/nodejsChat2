@@ -47,3 +47,12 @@ npm install express socket.io cookie-parser express-session mongoose --save
 
 然后在app中创建index.html
 再往server中写代码  然后再一一对应弄完
+
+
+想从本项目中提交到你的github中的话就要第一次就可能需要输入几个命令 但是第二次就不需要了
+    git add -A
+    git commit -m"描述的东西"
+    git push origin master
+    然后输入你的git账户名和账户密码
+    然后就完成了
+    git remove -v
