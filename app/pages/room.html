@@ -7,7 +7,7 @@
             <div class="panel-body">
                 <ul class="list-group">
                     <li ng-repeat="message in room.messages track by $index">
-                        <img ng-src="message.user.avatar" alt=""/>
+                        <img ng-src="{{message.user.avatar}}" alt=""/>
                         {{message.user.email}}:
                         {{message.content}}
                         <span class="pull-right">{{message.createAt}}</span>
@@ -27,7 +27,7 @@
             <div class="panel-body">
                 <ul class="list-group">
                     <li ng-repeat="user in room.users track by $index">
-                        <img ng-src="user.avatar" alt=""/>
+                        <img ng-src="{{user.avatar}}" alt=""/>
                         {{user.email}}
                     </li>
                 </ul>
