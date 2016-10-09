@@ -14,12 +14,16 @@
                 <div class="navbar-brand">珍珍聊天室</div>
             </div>
             <div>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="">头像:用户名</a></li>
+                <ul ng-show="user" class="nav navbar-nav navbar-right">
+                    <li><a href=""><img class="img-rounded" style="width: 32px"  ng-src="{{user.avatar}}"/>
+                        {{user.email}}</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    <div ng-if="errorMsg" class="alert alert-danger">
+        {{errorMsg}}
+    </div>
     <div ng-view></div><!--都要这个写出来  渲染  不然就会出现的不多啊-->
 </div>
 <script src="/lib/jquery/dist/jquery.js"></script>

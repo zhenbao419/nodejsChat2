@@ -61,3 +61,60 @@ npm install express socket.io cookie-parser express-session mongoose --save
 
  若是你已经上传一次后  你更改了里面的项目 你想要再次push的话并且不想重新建立的话就可以从
   VCS--》Commit Change --》 commit and push 这样就可以了
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  git-bash
+  ssh root@47.88.150.121
+  Zfpx2016
+
+  https://zhufengnodejs.github.io/doc/html/%E6%9C%8D%E5%8A%A1%E5%99%A8/linux%E5%B8%83%E7%BD%B2.html
+
+  https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
+
+  如何在ubuntu中安装 node
+  apt-get install curl
+  curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+
+
+  apt-get install git
+  apt-get install mongodb
+
+
+
+
+
+
+  阿里云服务器 之后的步骤
+  1. 连接服务器 ssh root@ip  这个里面的ip是直接的服务器的ip 写的时候只写地址就好 不用写ip
+              如ssh root@44.88.150.102         密码Zfpx2016
+  2. apt-get update 更新一下操作系统
+  3. apt-get install curl
+  curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+  4. apt-get install git
+  5. apt-get install mongodb
+  6. 需要把你自己的项目上传到github
+  7. git clone git地址
+  8. cd 目录  (你可以  ls  然后就看到了目录了)
+  9. npm install
+
+  10.   npm install bower -g
+      sudo bower install --allow-root
+
+  11. npm start 启动服务
