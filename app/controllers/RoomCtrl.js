@@ -25,13 +25,14 @@ angular.module('chatMod').controller('RoomCtrl',function($routeParams,$scope,$ht
     *    3. 在前台发送消息给后台，后台保存到当前房间里messages数组中，并且通过所有的客户端添加此消息
     * */
 
-    var socket = io.connect('ws://localhost:9090');
+    //var socket = io.connect(`ws://localhost:9090`);平常写的
+    //var socket = io.connect(`ws:${window.location.host}`); //这样可以用到服务器上
+   var socket = io.connect(`/`); //这样可以用到服务器上
     socket.on('message',function(msgObj){
         $scope.room.messages.push(msgObj);
     });
     $scope.send = function(){
-        var content = $scope.content;
-        socket.send({user:$rootScope.user._id,content:$scope.content});
+        socket.send({user:$rootScope.user,content:$scope.content});
     }
 
 
@@ -39,6 +40,12 @@ angular.module('chatMod').controller('RoomCtrl',function($routeParams,$scope,$ht
 
 angular.module('chatMod').directive('keyDown',function(){
     return {
-
+        link:function(scope,element,attrs){
+            element.keydown(function(event){
+                if(event.keyCode == 13){
+                    scope.$eval(attrs.keyDown);
+                }
+            });
+        }
     }
-})
+});

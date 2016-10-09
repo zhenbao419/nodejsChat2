@@ -55,7 +55,7 @@ app.post('/rooms',function(req,res){
         if(err){
             res.send({err:1,msg:'增加房间出错',data:err});
         }else{
-            res.send({err:0,msg:'成功',data:rooms});
+            res.send({err:0,msg:'成功',data:doc});
         }
     })
 });
@@ -65,7 +65,7 @@ app.get('/rooms/:id',function(req,res){
         if(err){
             res.send({err:1,msg:'查询房间出错',data:err});
         }else{
-            res.send({err:0,msg:'成功',data:rooms});
+            res.send({err:0,msg:'成功',data:room});
         }
     })
 });
@@ -74,15 +74,19 @@ app.get('/rooms/:id',function(req,res){
 var server=require('http').createServer(app);
 /*
 *
+ * 监听客户端的socket.io请求
 * */
-var io= require('socket.io').(server);
+var io= require('socket.io')(server);
 io.on('connection',function(socket){
     socket.on('message',function(msgObj){
-        io.emit('message')
-    })
+        msgObj.createAt = new Date();
+       // console.log(msgObj);
+        io.emit('message',msgObj);
+    });
 
 });
-//server.listen(9090);
+server.listen(9090);
 
 
-app.listen(9090);
+/*
+app.listen(9090);*/

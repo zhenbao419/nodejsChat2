@@ -1,3 +1,7 @@
+运行的时候要用端口号9090 来运行
+ http://localhost:9090/
+ 还有就是要先启动数据库 否则执行不了
+
 要安装的东西
 
 npm init -y
@@ -56,6 +60,15 @@ npm install express socket.io cookie-parser express-session mongoose --save
     然后输入你的git账户名和账户密码
     然后就完成了
     git remove -v
+
+若是从github中创建一的新的地址的话 就需要你在命令行里面再运行几个命令
+      git remove -v 这样看你的地址是不是对的
+      git remove add origin 新的github中的地址 这样就可以了
+      再继续执行 git add -A
+               git commit -m"描述的东西"
+               git push origin master
+               然后输入你的git账户名和账户密码
+               然后就完成了
 
 
 
@@ -118,3 +131,6 @@ npm install express socket.io cookie-parser express-session mongoose --save
       sudo bower install --allow-root
 
   11. npm start 启动服务
+
+
+最新的步骤 也是最全的步骤
